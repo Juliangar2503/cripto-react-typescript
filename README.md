@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# CryptoApp - React, Zustand & Zod
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![CryptoApp](public/photoApp.png)
 
-Currently, two official plugins are available:
+## Descripción
+Este proyecto es una aplicación de seguimiento de criptomonedas desarrollada con **React**, en la cual he aprendido a gestionar el estado global con **Zustand** y a realizar llamadas a APIs de manera eficiente. Además, he utilizado **Zod** para validar y estructurar correctamente los datos obtenidos de la API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- **React**: Biblioteca principal para la construcción de la interfaz.
+- **Zustand**: Para el manejo del estado global de la aplicación, proporcionando una solución ligera y sencilla.
+- **Zod**: Para asegurar que los datos recibidos de la API tengan la estructura esperada.
+- **Axios**: Para realizar las llamadas a la API de criptomonedas.
+- **Vite**: Para la configuración y optimización del entorno de desarrollo.
 
-## Expanding the ESLint configuration
+## Lecciones aprendidas
+1. **Gestión de estado con Zustand**:
+   - Simplifica la administración del estado global sin necesidad de Redux.
+   - Facilita el acceso y modificación del estado desde cualquier parte de la aplicación.
+   
+2. **Validación de datos con Zod**:
+   - Ayuda a evitar errores al definir esquemas de datos precisos.
+   - Permite transformar y validar datos de forma sencilla.
+   
+3. **Manejo de APIs**:
+   - Uso de Axios para realizar llamadas asíncronas de manera eficiente.
+   - Implementación de control de errores para manejar respuestas inesperadas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Deploy
+Puedes ver la aplicación funcionando en el siguiente enlace:  
+🔗 [CryptoApp Deploy](https://juli-crypto-api.netlify.app)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
