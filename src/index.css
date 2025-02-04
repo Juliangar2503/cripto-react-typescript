@@ -1,0 +1,110 @@
+:root {
+  --white: #ffffff;
+  --black: #182339;
+  --primary: #61ECBC;
+}
+
+html{
+  font-size: 62.5%;
+
+}
+
+body{
+  background-image: url('/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 2rem;
+}
+
+.container{
+  max-width: 60rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+.app-title{
+  font-size: 3rem;
+  color: var(--white);
+  margin-top:5rem;
+  line-height: .8;
+}
+
+.app-title span{
+  display: block;
+  color: var(--primary);
+  font-size: 3.5rem;
+} 
+
+.content{
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+}
+
+.form
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form label{
+  color: var(--black)
+}
+
+.form select{
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--black);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.form [type="submit"]{
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--black);
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+
+.form [type="submit"]:hover{
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+}
+
+.error{
+  color: red;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.result{
+  display: grid;
+  grid-template-columns:1fr 3fr;
+  gap: 1rem;
+  font-size: 1.7rem;
+}
+
+.result img{
+  width: 100px;
+  height: 100px;
+}
+
+.result p{
+  margin: 0 0 1rem;
+}
+
+.result p span{
+  font-weight: bold;
+}
